@@ -15,7 +15,7 @@ def user_registration(request):
             return redirect('home_page') # go to index.html(home page)
     else:
         form = RegistrationForm()
-        return render(request,'form/register.html',{"form":form})
+    return render(request,'form/register.html',{"form":form})
             
 
 def user_login(request):
