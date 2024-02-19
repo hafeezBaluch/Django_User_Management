@@ -1,0 +1,13 @@
+{% block title %}Register{% endblock %}
+{% block content %}
+ <h1>Register</h1>
+ <form method="post">
+ {{ form.as_p }}
+ {% csrf_token %}
+ <p><input type="submit" value="Register"></p>
+ </form>
+ <div class="d-flex align-items-center justify-content-center pb-4">
+    <p class="mb-0 me-2">Already have an account?</p>
+    <a href="{% url 'login' %}" class="btn btn-outline-light">Login</a>
+  </div>
+{% endblock %}
